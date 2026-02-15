@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f5f3ef;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #b4232c;
+  --accent2: #e46a2e;
+}
+
+.dark {
+  --bg: #0b0f14;
+  --surface: #111827;
+  --text: #f9fafb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+  --accent: #ff4d5a;
+  --accent2: #ff8a4c;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  color: var(--text);
+  background: radial-gradient(circle at top left, color-mix(in srgb, var(--accent2) 8%, var(--bg)) 0%, var(--bg) 45%),
+    radial-gradient(circle at bottom right, color-mix(in srgb, var(--accent) 8%, var(--bg)) 0%, var(--bg) 50%);
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 40%, white 60%);
+  color: var(--text);
+}
